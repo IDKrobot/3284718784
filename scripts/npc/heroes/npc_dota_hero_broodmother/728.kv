@@ -1,0 +1,292 @@
+// abilities for broodmother 7.28
+
+"DOTAAbilities"
+{
+    "broodmother_spawn_spiderlings_custom_728"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/broodmother/728/spawn_spiderlings/spawn_spiderlings"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "AbilityTextureName"            "broodmother_spawn_spiderlings"
+
+        "AbilityCastRange"              "700"
+        "AbilityCastPoint"              "0.2"
+        "AbilityCooldown"               "11 10 9 8"
+        "AbilityManaCost"               "100"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
+
+        "AbilityValues"
+        {
+            "buff_duration"             "2.0"
+            "spiderling_duration"       "60.0"
+            "damage"
+            {
+                "value"                                             "70 140 210 280"
+                "special_bonus_unique_broodmother_728_custom"       "+80"
+            }
+            "count"                     "1 2 3 4"
+            "projectile_speed"          "1200"
+
+            "spiders_bonus_damage"
+            {
+                "value"                                             "0"
+                "special_bonus_unique_broodmother_728_custom_2"     "+18"
+            }
+            "spiders_bonus_health"
+            {
+                "value"                                             "0"
+                "special_bonus_unique_broodmother_728_custom_4"     "+350"
+            }
+        }
+    }
+
+    "broodmother_spin_web_custom_728"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/broodmother/728/spin_web/spin_web"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+
+        "HasScepterUpgrade"             "1"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "AbilityTextureName"            "broodmother_spin_web"
+
+        "AbilityCastRange"              "1000"
+        "AbilityCastPoint"              "0.4"
+        "AbilityManaCost"               "50"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_2"
+
+        "AbilityValues"
+        {
+            "radius"
+            {
+                "value"                         "900"
+                "affected_by_aoe_increase"      "1"
+            }
+            "count"
+            {
+                "value"                     "2 4 6 8"
+                "special_bonus_scepter"     "6 10 14 18"
+            }
+            "heath_regen"               "3 5 7 9"
+            "bonus_movespeed"
+            {
+                "value"                     "25.0 35.0 45.0 55.0"
+                "special_bonus_scepter"     "35.0 50.0 65.0 80.0"
+            }
+            
+            "AbilityCharges"
+            {
+                "value"                     "2 4 6 8"
+                "special_bonus_scepter"     "=6 =10 =14 =18"
+            }
+            "AbilityChargeRestoreTime"      "45.0"
+        }
+    }
+
+    "broodmother_incapacitating_bite_custom_728"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/broodmother/728/incapacitating_bite/incapacitating_bite"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "IsBreakable"                   "1"
+
+        "AbilityTextureName"            "broodmother_incapacitating_bite"
+
+        "AbilityValues"
+        {
+            "miss_chance"               "30 40 50 60"
+            "bonus_movespeed"           "-20 -30 -40 -50"
+            "duration"                  "2.0"
+        }
+    }
+
+    "broodmother_silken_bola_custom_728"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/broodmother/728/silken_bola/silken_bola"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+
+        "IsGrantedByShard"              "1"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "1"
+
+        "AbilityTextureName"            "broodmother_silken_bola"
+
+        "AbilityCastRange"              "900"
+        "AbilityCooldown"               "12"
+        "AbilityCastPoint"              "0.1"
+        "AbilityManaCost"               "50"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
+
+        "AbilityValues"
+        {
+            "duration"                  "2.0"
+            "projectile_speed"          "1200"
+        }
+    }
+
+    "broodmother_insatiable_hunger_custom_728"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/broodmother/728/insatiable_hunger/insatiable_hunger"
+
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "3"
+
+        "AbilityTextureName"            "broodmother_insatiable_hunger"
+
+        "AbilityCooldown"               "45"
+        "AbilityCastPoint"              "0.2"
+        "AbilityManaCost"               "100"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
+
+        "AbilityValues"
+        {
+            "bonus_damage"
+            {
+                "value"                                             "60 100 140"
+                "special_bonus_unique_broodmother_728_custom_3"     "+50"
+            }
+            "lifesteal_pct"
+            {
+                "value"                                             "60 100 140"
+                "special_bonus_unique_broodmother_728_custom_3"     "+50"
+            }
+            "duration"                  "14"
+        }
+    }
+
+    // Units Abilities
+
+    "broodmother_poison_sting_custom_728"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/broodmother/728/poison_sting/poison_sting"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "1"
+
+        "IsBreakable"                   "1"
+
+        "AbilityTextureName"            "broodmother_poison_sting"
+
+        "AbilityValues"
+        {
+            "damage_per_second"         "8"
+            "movement_speed"            "-8"
+            "duration_hero"             "2"
+            "duration"                  "6"
+        }
+    }
+
+    "broodmother_spawn_spiderite_custom_728"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/broodmother/728/spawn_spiderite/spawn_spiderite"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "1"
+
+        "IsBreakable"                   "1"
+
+        "AbilityTextureName"            "broodmother_spawn_spiderite"
+
+        "AbilityValues"
+        {
+            "spiderite_duration"        "60.0"
+            "buff_duration"             "2.0"
+        }
+    }
+
+    "broodmother_spin_web_destroy_custom_728"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/broodmother/728/spin_web/spin_web_destroy"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+        "MaxLevel"                      "1"
+
+        "AbilityTextureName"            "broodmother_spin_web_destroy"
+    }
+
+    //=========================//
+    //         TALENTS         //
+    //=========================//
+
+    // +80 Spawn Spiderlings Damage
+    "special_bonus_unique_broodmother_728_custom"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // +18 Spiders Attack Damage
+    "special_bonus_unique_broodmother_728_custom_2"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // +50 Insatiable Hunger Damage/Lifesteal
+    "special_bonus_unique_broodmother_728_custom_3"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // +350 Spiders Health
+    "special_bonus_unique_broodmother_728_custom_4"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+}

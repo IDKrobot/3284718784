@@ -1,0 +1,67 @@
+"DOTAAbilities"
+{
+    // 7.34
+    "item_revenants_brooch_custom_734"
+    {
+        "BaseClass"                     "item_lua"
+        "ScriptFile"                    "abilities/items/revenants_brooch/734/revenants_brooch"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+
+        "AbilityTextureName"            "item_revenants_brooch_734"
+
+        "AbilityCooldown"               "25"
+        "AbilityManaCost"               "300"
+
+        "ItemCost"                      "3300"
+        "ItemShopTags"                  "int;hard_to_tag"
+        "ItemQuality"                   "rare"
+        "ItemAliases"                   "staff;misery;sm"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        "ShouldBeSuggested"             "1"
+        "ItemPurchasable"               "0"
+
+        "AbilityValues"
+        {
+            "bonus_intellect"           "45"
+            "bonus_attack_speed"        "40"
+            "bonus_armor"               "8"
+            "projectile_speed"          "300"
+            "int_damage_multiplier"     "1.0"
+            "slow"                      "25.0"
+            "slow_duration"             "4.0"
+            "passive_cooldown"          "9.0"
+            "number_of_attacks"         "5"
+            "active_duration"           "15.0"
+            "mres_reduction"            "20.0"
+            "reduction_duration"        "3.0"
+        }
+    }
+
+    // 7.36
+    "item_revenants_brooch_custom_736"
+    {
+        "BaseClass"                     "item_lua"
+        "ScriptFile"                    "abilities/items/revenants_brooch/736/revenants_brooch"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+
+        "AbilityTextureName"            "item_revenants_brooch_736"
+
+        "ItemCost"                      "3300"
+        "ItemShopTags"                  "int;hard_to_tag"
+        "ItemQuality"                   "rare"
+        "ItemAliases"                   "staff;misery;sm"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        "ShouldBeSuggested"             "1"
+        "ItemPurchasable"               "0"
+
+        "AbilityValues"
+        {
+            "bonus_damage"              "70"
+            "hero_lifesteal"            "20"
+            "creep_lifesteal"           "4"
+            "manacost_per_hit"          "50"
+        }
+    }
+}

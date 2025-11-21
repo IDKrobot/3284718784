@@ -1,0 +1,533 @@
+/* Prettified by Source 2 Viewer 15.0.0.0 - https://valveresourceformat.github.io */
+
+@keyframes 'PatchButtonHurt'
+{
+	0%
+	{
+		opacity: 1.0;
+	}
+	
+	50%
+	{
+		opacity: 0.875;
+	}
+	
+	100%
+	{
+		opacity: 1.0;
+	}
+	
+}
+
+@keyframes 'BestiaryItemFadeOut'
+{
+	0%
+	{
+		box-shadow: 0px 0px 5px 0.5px #faed3f7c;
+	}
+	
+	100%
+	{
+		box-shadow: 0px 0px 7px 0.2px #e1e1e123;
+	}
+	
+}
+
+@keyframes 'BestiaryItemPulse'
+{
+	0%
+	{
+		box-shadow: 0px 0px 5px 0.5px #faed3f7c;
+	}
+	
+	25%
+	{
+		box-shadow: 0px 0px 5px 0.5px #faed3f7c;
+	}
+	
+	50%
+	{
+		box-shadow: 0px 0px 8px 0.25px #fff1277c;
+	}
+	
+	100%
+	{
+		box-shadow: 0px 0px 5px 0.5px #faed3f7c;
+	}
+	
+}
+
+#PatcherButton
+{
+	width: 202px;
+	height: 36px;
+	background-color: #0c151c;
+	horizontal-align: right;
+	vertical-align: bottom;
+	margin-right: 94px;
+	margin-bottom: 145px;
+	transition-duration: 0.3s, 0.3s, 0.15s;
+	transition-property: opacity, transform, background-color;
+	transition-timing-function: ease-in-out;
+	opacity: 0.0;
+	transform: translateY(32px);
+	z-index: -998;
+}
+
+#PatcherButton.Visible
+{
+	opacity: 1.0;
+	transform: none;
+}
+
+#PatcherButton.Selected
+{
+	brightness: 1.2;
+	border: 2px solid #9cd1d408;
+}
+
+#PatcherButton Label
+{
+	padding: 1px 3px;
+	horizontal-align: center;
+	vertical-align: center;
+	color: #cccccca0;
+	letter-spacing: 0.5px;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: defaultFont;
+	text-align: center;
+	text-overflow: shrink;
+	text-transform: uppercase;
+	text-shadow: 4px 3px 0px 1.5 black;
+}
+
+#PatcherButton.Selected Label
+{
+	color: #f2f2f2;
+	text-shadow: none;
+}
+
+#PatcherButton.Selected:hover Label
+{
+	brightness: 1.2;
+}
+
+#PatcherButton:hover Label
+{
+	brightness: 2.0;
+}
+
+#PatcherButton:not(.HurtCooldown):active
+{
+	sound: "ui_generic_button_click";
+}
+
+#PatcherButton.HurtCooldown.Animation
+{
+	animation-name: PatchButtonHurt;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 1.2s;
+}
+
+#PatcherButton.HurtCooldown
+{
+	background-color: #11181d;
+}
+
+#PatcherButton.HurtCooldown Label
+{
+	color: #fb3939bb;
+}
+
+#PatcherButton.HurtCooldown.Animation Label
+{
+	transition-duration: 0.1s;
+	transition-property: color;
+	transition-timing-function: ease-in-out;
+}
+
+.ItemPatcher
+{
+	horizontal-align: right;
+	vertical-align: bottom;
+	margin-right: 92px;
+	margin-bottom: 39px;
+	flow-children: down;
+	visibility: collapse;
+}
+
+.ItemPatcher.Visible
+{
+	visibility: visible;
+}
+
+.ItemContainer
+{
+	width: 200px;
+	height: 50px;
+	flow-children: right;
+}
+
+.ItemButton
+{
+	width: 60px;
+	height: 50px;
+	margin: 0px 2px;
+}
+
+.ItemButton.HasItem:active
+{
+	sound: "ui_generic_button_click";
+}
+
+#PatcherPatches
+{
+	height: fit-children;
+	margin-right: 141px;
+	margin-bottom: 186px;
+	vertical-align: bottom;
+	horizontal-align: right;
+	visibility: collapse;
+}
+
+#PatcherPatches.Visible
+{
+	visibility: visible;
+}
+
+#PatcherPatchContainer
+{
+	margin: 2px;
+	vertical-align: center;
+	horizontal-align: center;
+	flow-children: up;
+}
+
+#PatcherHint
+{
+	width: 286px;
+	height: 78px;
+	margin-right: 50px;
+	margin-bottom: 112px;
+	horizontal-align: right;
+	vertical-align: middle;
+	opacity: 0.0;
+}
+
+#PatcherHint.Visible
+{
+	opacity: 1.0;
+}
+
+#PatcherHint Label
+{
+	font-size: 18px;
+	font-weight: semi-bold;
+	font-stretch: normal;
+	letter-spacing: 1px;
+	color: #f7f7f7;
+	text-shadow: 0px 0px 5px 3 #000000;
+	text-overflow: shrink;
+	vertical-align: center;
+	text-align: center;
+	horizontal-align: center;
+}
+
+.ItemPatchButton
+{
+	width: 100px;
+	height: 38px;
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(#272d31), to(#191919));
+	background-image: url("s2r://panorama/images/backgrounds/background_play_button_2x_png.vtex");
+	background-size: cover;
+	border: 1px solid #62626290;
+	transition-property: brightness;
+	transition-duration: 0.12s;
+	transition-timing-function: ease-in-out;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.ItemPatchButton.Selected
+{
+	brightness: 1.2;
+}
+
+.ItemPatchButton.Selected Label
+{
+	color: #ffffffe0;
+	brightness: 0.8;
+}
+
+.ItemPatchButton:hover
+{
+	brightness: 1.4;
+	box-shadow: fill #414f4daa 0px 0px 8px 0px;
+}
+
+.ItemPatchButton:active
+{
+	brightness: 1.5;
+	sound: "ui.click_forward";
+}
+
+.ItemPatchButton Label
+{
+	font-size: 18px;
+	font-weight: semi-bold;
+	font-stretch: normal;
+	letter-spacing: 1px;
+	color: #a1a1a1;
+	text-shadow: 0px 0px 5px 3 #000000;
+	text-overflow: shrink;
+	vertical-align: center;
+	text-align: center;
+	horizontal-align: center;
+	brightness: 0.5;
+	transition-property: color, brightness;
+	transition-duration: 0.06s;
+	transition-timing-function: ease-out;
+}
+
+.ItemPatchButton:hover Label
+{
+	color: white;
+	brightness: 1.0;
+}
+
+#BlurBackground
+{
+	width: 100%;
+	height: 100%;
+	background-color: #00000055;
+	transition-property: background-color, opacity;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+	opacity: 0.0;
+	z-index: -1;
+}
+
+#BlurBackground.Opened
+{
+	opacity: 1.0;
+}
+
+#ItemBestiary
+{
+	width: 736px;
+	flow-children: down;
+	background-color: gradient(linear, 0% 0%, 0% 25%, from(#232326), to(#1c1d20));
+	box-shadow: #00000099 0px 0px 8px 0px;
+	border: 2px solid #32383677;
+	horizontal-align: center;
+	vertical-align: center;
+	transition-duration: 0.24s;
+	transition-property: opacity, transform;
+	transition-timing-function: ease-out;
+	opacity: 0.0;
+	transform: translateY(-70px) rotateX(10deg);
+}
+
+#ItemBestiary.Opened
+{
+	opacity: 1.0;
+	transform: none;
+}
+
+#ItemBestiaryHeader
+{
+	width: 100%;
+	height: 40px;
+	horizontal-align: center;
+	vertical-align: center;
+	background-color: #00000077;
+}
+
+#ItemBestiaryHeader Label
+{
+	font-size: 24px;
+	color: white;
+	horizontal-align: center;
+	vertical-align: center;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#LeaveBestiary
+{
+	width: 24px;
+	height: 24px;
+	background-image: url("s2r://panorama/images/custom_game/leave_button_png.vtex");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	img-shadow: 0px 0px 3px 3 black;
+	wash-color: #CDF;
+	opacity: 1.2;
+	margin-right: 8px;
+	horizontal-align: right;
+	vertical-align: center;
+	transition-property: brightness;
+	transition-duration: 0.12s;
+	transition-timing-function: ease-in-out;
+	brightness: 1.0;
+}
+
+#LeaveBestiary:hover
+{
+	brightness: 1.5;
+}
+
+#BestiaryHint
+{
+	width: 24px;
+	height: 24px;
+	background-image: url("s2r://panorama/images/custom_game/hint_icon_png.vtex");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	img-shadow: 0px 0px 3px 3 black;
+	wash-color: #CDF;
+	opacity: 1.2;
+	margin-left: 8px;
+	horizontal-align: left;
+	vertical-align: center;
+	transition-property: brightness;
+	transition-duration: 0.12s;
+	transition-timing-function: ease-in-out;
+	tooltip-position: left;
+}
+
+#BestiaryHint:hover
+{
+	brightness: 1.5;
+}
+
+#ItemBestiaryContainer
+{
+	width: 100%;
+	height: 265px;
+	flow-children: right-wrap;
+	horizontal-align: center;
+	overflow: squish scroll;
+	padding: 8px;
+}
+
+.BestiaryItem
+{
+	width: 70px;
+	margin: 16px;
+	box-shadow: 0px 0px 5px 0.5px #faed3f7c;
+	transition-duration: 0.1s, 0.5s;
+	transition-property: brightness, box-shadow;
+	transition-timing-function: ease-out;
+	brightness: 1.0;
+	tooltip-position: right;
+}
+
+.BestiaryItem:hover
+{
+	brightness: 1.6;
+}
+
+#ItemBestiary.Opened.ShowPatches .BestiaryItem
+{
+	box-shadow: 0px 0px 7px 0.2px #e1e1e123;
+	animation-name: BestiaryItemFadeOut;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;
+	animation-duration: 0.5s;
+}
+
+#ItemBestiary.Opened:not(.ShowPatches) .BestiaryItem
+{
+	animation-name: BestiaryItemPulse;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+	animation-duration: 1.5s;
+	animation-delay: 2s;
+}
+
+#ItemBestiaryPatches
+{
+	width: 100%;
+	height: 160px;
+	border-top: 4px solid #32383677;
+	background-color: #00000070;
+	horizontal-align: center;
+	vertical-align: bottom;
+}
+
+#ItemBestiaryPatchContainer
+{
+	horizontal-align: center;
+	vertical-align: center;
+	flow-children: right;
+}
+
+.BestiaryPatch
+{
+	margin-left: 16px;
+	margin-right: 16px;
+	margin-bottom: 8px;
+	flow-children: down;
+	transition-duration: 0.15s, 0.25s;
+	transition-property: opacity, transform;
+	transition-timing-function: ease-in-out;
+	opacity: 0.0;
+	transform: translateY(6px);
+}
+
+.BestiaryPatch.Visible
+{
+	opacity: 1.0;
+	transform: translateY(0px);
+}
+
+#BestiaryPatchLabel
+{
+	font-size: 22px;
+	color: white;
+	horizontal-align: center;
+	vertical-align: center;
+	text-shadow: 0px 3px 12px 1 black;
+	letter-spacing: 1.5px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: titleFont;
+}
+
+#BestiaryPatchItem
+{
+	width: 86px;
+	margin-top: 12px;
+	box-shadow: 4px 4px 8px 0.5px #0000009d;
+	transition-property: brightness;
+	transition-duration: 0.15s;
+	transition-timing-function: ease-out;
+	brightness: 1.0;
+}
+
+#BestiaryPatchItem:hover
+{
+	box-shadow: 4px 4px 12px 0.5px #000000a5;
+	brightness: 1.6;
+}
+
+#BestiaryButton
+{
+	background-image: url("s2r://panorama/images/custom_game/bestiary_icon_png.vtex");
+}
+
+#BestiaryButton:active
+{
+	sound: "ui_quit_menu_fadeout";
+}
+
+#ItemBestiary #VerticalScrollBar
+{
+	margin-right: 6px;
+}
+

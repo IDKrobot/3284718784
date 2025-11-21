@@ -1,0 +1,156 @@
+/* Prettified by Source 2 Viewer 15.0.0.0 - https://valveresourceformat.github.io */
+
+@keyframes 'UnitDisplayRecentlyAttacked'
+{
+	0%
+	{
+		opacity: 0.7;
+	}
+	
+	70%
+	{
+		opacity: 0.0;
+	}
+	
+	100%
+	{
+		opacity: 0.0;
+	}
+	
+}
+
+#UnitsDisplay.Visible
+{
+	visibility: visible;
+}
+
+#UnitsDisplay
+{
+	width: 110px;
+	height: 500px;
+	visibility: collapse;
+	z-index: -1;
+}
+
+#UnitsDisplayContainer
+{
+	width: 110px;
+	height: fit-children;
+	flow-children: down;
+}
+
+.MainSelected
+{
+	color: #000000;
+}
+
+.UnitRow
+{
+	width: 89px;
+	height: 72px;
+	vertical-align: top;
+	margin: 2px;
+}
+
+.MainSelected #UnitDisplayContainer
+{
+	border: 1px solid white;
+}
+
+#UnitDisplayContainer
+{
+	width: 89px;
+	height: 50px;
+	box-shadow: inset #000000 0px 1px 0px 1px;
+	horizontal-align: center;
+	vertical-align: middle;
+	z-index: 2;
+}
+
+.MainSelected .UnitImage
+{
+	brightness: 2.0;
+}
+
+.UnitImage
+{
+	width: 100%;
+	height: 100%;
+	brightness: 0.4;
+}
+
+#ProgressContainer
+{
+	width: 100%;
+	height: 12px;
+	vertical-align: bottom;
+	flow-children: down;
+	brightness: 2.0;
+}
+
+.RecentlyAttacked #RecentlyDamaged
+{
+	animation-name: UnitDisplayRecentlyAttacked;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 0.8s;
+	visibility: visible;
+}
+
+#RecentlyDamaged
+{
+	width: 89px;
+	height: 50px;
+	horizontal-align: center;
+	vertical-align: middle;
+	opacity: 0.9;
+	background-color: red;
+	visibility: collapse;
+	z-index: 3;
+}
+
+.ProgressBar
+{
+	background-color: #000000ff;
+	overflow: noclip;
+}
+
+#HealthProgress
+{
+	height: 8px;
+}
+
+#ManaProgress
+{
+	height: 4px;
+}
+
+#HealthProgress,#ManaProgress
+{
+	width: 100%;
+	border: 0px;
+	border-radius: 0px;
+}
+
+#HealthProgress .ProgressBarLeft
+{
+	border-radius: 0px;
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(#425d25), color-stop(0.2, #6c993d), color-stop(0.5, #719f40), to(#425d25));
+}
+
+#HealthProgress .ProgressBarRight
+{
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(#17200d), color-stop(0.2, #222e13), color-stop(0.5, #1e2911), to(#17200d));
+}
+
+#ManaProgress .ProgressBarLeft
+{
+	border-radius: 0px;
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(#2b4287), color-stop(0.2,#4165ce), color-stop(0.5, #4a73ea), to(#2b4287));
+}
+
+#ManaProgress .ProgressBarRight
+{
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(#101932), color-stop(0.2, #172447), color-stop(0.5, #162244), to(#101932));
+}
+

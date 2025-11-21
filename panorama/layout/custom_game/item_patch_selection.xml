@@ -1,0 +1,49 @@
+<!-- xml reconstructed by Source 2 Viewer 15.0.0.0 - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/custom_game/global.vcss_c" />
+		<include src="s2r://panorama/styles/custom_game/item_patch_selection.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/custom_game/utils.vjs_c" />
+		<include src="s2r://panorama/scripts/custom_game/vectors.vjs_c" />
+		<include src="s2r://panorama/scripts/custom_game/item_patch_selection.vjs_c" />
+	</scripts>
+	<snippets>
+		<snippet name="BestiaryPatchSnippet">
+			<Panel class="BestiaryPatch">
+				<Label id="BestiaryPatchLabel" />
+				<DOTAItemImage id="BestiaryPatchItem" />
+			</Panel>
+		</snippet>
+		<snippet name="PatcherSnippet">
+			<Panel class="ItemPatcher" hittest="false">
+				<Panel id="item_list" class="ItemContainer" hittest="false">
+					<Button id="item_0" class="ItemButton" onactivate="SelectSlot(0);" />
+					<Button id="item_1" class="ItemButton" onactivate="SelectSlot(1);" />
+					<Button id="item_2" class="ItemButton" onactivate="SelectSlot(2);" />
+				</Panel>
+				<Panel id="item_list2" class="ItemContainer" hittest="false">
+					<Button id="item_3" class="ItemButton" onactivate="SelectSlot(3);" />
+					<Button id="item_4" class="ItemButton" onactivate="SelectSlot(4);" />
+					<Button id="item_5" class="ItemButton" onactivate="SelectSlot(5);" />
+				</Panel>
+			</Panel>
+		</snippet>
+	</snippets>
+	<Panel class="MainHud" hittest="false">
+		<Panel id="ItemBestiary" acceptsfocus="true" oncancel="CloseBestiary()" hittest="true">
+			<Panel id="ItemBestiaryHeader">
+				<Panel id="BestiaryHint" />
+				<Button id="LeaveBestiary" onactivate="ToggleBestiary();" />
+				<Label text="#Item_Bestiary_Title" />
+			</Panel>
+			<Panel id="ItemBestiaryContainer" />
+			<Panel id="ItemBestiaryPatches">
+				<Panel id="ItemBestiaryPatchContainer" />
+			</Panel>
+		</Panel>
+		<Panel id="BlurBackground" hittest="false" />
+	</Panel>
+</root>

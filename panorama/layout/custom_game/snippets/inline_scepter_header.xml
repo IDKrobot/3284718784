@@ -1,0 +1,16 @@
+<!-- xml reconstructed by Source 2 Viewer 15.0.0.0 - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/custom_game/global.vcss_c" />
+		<include src="s2r://panorama/styles/custom_game/aghanim_tooltip.vcss_c" />
+	</styles>
+	<scripts />
+	<Panel class="InlineScepterHeader">
+		<Panel id="AghsStatusScepterContainer">
+			<Panel id="AghsStatusScepterIcon" />
+			<DOTAParticleScenePanel id="AghsStatusScepterScene" particleonly="true" cameraOrigin="400 0 0" lookAt="180 0 0" fov="20" hittest="false" />
+		</Panel>
+		<Label class="AghsTitle" text="#DOTA_AbilityTooltip_Aghs_Scepter" />
+	</Panel>
+</root>

@@ -1,0 +1,45 @@
+"DOTAAbilities"
+{
+    // CURRENT
+    "item_angels_demise"
+    {
+        "AbilitySharedCooldown"         "phylactery"
+    }
+
+    // 7.37
+    "item_angels_demise_custom_737"
+    {
+        "BaseClass"                     "item_lua"
+        "ScriptFile"                    "abilities/items/angels_demise/737/angels_demise"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+        "AbilityTextureName"            "item_angels_demise_737"
+
+        "AbilityCooldown"               "6"
+        "AbilitySharedCooldown"         "phylactery"
+
+        "ItemCost"                      "5900"
+        "ItemShopTags"                  "hard_to_tag"
+        "ItemQuality"                   "common"
+        "ItemAliases"                   "angel;demise"
+        "SuggestLategame"               "1"
+        "ItemSellable"                  "1"
+        "ItemPurchasable"               "0"
+
+        "AbilityValues"
+        {
+            "bonus_mana_regen"          "8"
+            "bonus_health"              "200"
+            "bonus_mana"                "200"
+            "bonus_all_stats"           "8"
+            "bonus_damage"              "50"
+            "slow"                      "50"
+            "slow_duration"             "1.5"
+            "bonus_spell_damage"        "150"
+            "bonus_attack_damage"       "75.0"
+            "crit_chance"               "30"
+            "crit_multiplier"           "160"
+        }
+    }
+}

@@ -1,0 +1,41 @@
+/* Prettified by Source 2 Viewer 15.0.0.0 - https://valveresourceformat.github.io */
+
+#CustomAbilityExtraAttributes
+{
+	margin-top: 5px;
+	padding-left: 8px;
+	color: #596e89;
+	font-size: 16px;
+	font-weight: normal;
+	margin-right: 2px;
+	letter-spacing: 0px;
+	font-family: defaultFont;
+	transition-duration: 0.0s;
+	transition-property: opacity;
+	transition-timing-function: ease-in-out;
+	opacity: 0.0;
+}
+
+#CustomAbilityExtraAttributes Image
+{
+	width: 16px;
+	height: 16px;
+	margin: 2px;
+}
+
+#CustomAbilityExtraAttributes.Visible
+{
+	transition-duration: 0.12s;
+	opacity: 1.0;
+}
+
+#CustomAbilityExtraAttributes.Hidden
+{
+	visibility: visible;
+}
+
+#CustomAbilityExtraAttributes.Hidden.DefaultValues,.IsItem #CustomAbilityExtraAttributes.Hidden
+{
+	visibility: collapse;
+}
+

@@ -1,0 +1,222 @@
+// abilities for clinkz 7.30
+
+"DOTAAbilities"
+{
+    "clinkz_burning_barrage_custom_730"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/clinkz/730/burning_barrage/burning_barrage"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "AbilityTextureName"            "clinkz_burning_barrage"
+
+        "AbilityCooldown"               "28 24 20 16"
+        "AbilityManaCost"               "40 50 60 70"
+        "AbilityChannelTime"            "1.5 1.9 2.3 2.7"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
+        "AbilityCastGestureSlot"        "DEFAULT"
+        "AbilityChannelAnimation"       "ACT_DOTA_CHANNEL_ABILITY_1"
+
+        "AbilityValues"
+        {
+            "wave_count"
+            {
+                "value"                                         "3 4 5 6"
+                "special_bonus_unique_clinkz_730_custom_3"      "+2"
+            }
+            "range"                     "750 800 850 900"
+            "damage_pct"                "60.0"
+            "projectile_width"
+            {
+                "value"                     "200"
+                "affected_by_aoe_increase"  "1"
+            }
+        }
+    }
+
+    "clinkz_searing_arrows_custom_730"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/clinkz/730/searing_arrows/searing_arrows"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+        "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "AbilityTextureName"            "clinkz_searing_arrows"
+
+        "AbilityCastRange"              "600"
+        "AbilityManaCost"               "10"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_2"
+
+        "AbilityValues"
+        {
+            "bonus_damage"
+            {
+                "value"                                         "24 36 48 60"
+                "special_bonus_unique_clinkz_730_custom_2"      "+30"
+            }
+        }
+    }
+
+    "clinkz_wind_walk_custom_730"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/clinkz/730/wind_walk/wind_walk"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+
+        "HasShardUpgrade"               "1"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "AbilityTextureName"            "clinkz_wind_walk"
+
+        "AbilityManaCost"               "75"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_3"
+
+        "AbilityValues"
+        {
+            "duration"                  "25 30 35 40"
+            "fade_time"                 "0.6"
+            "bonus_movespeed"           "15.0 30.0 45.0 60.0"
+
+            "AbilityCooldown"
+            {
+                "value"                                     "20 19 18 17"
+                "special_bonus_unique_clinkz_730_custom"    "-5"
+            }
+        }
+    }
+
+    "clinkz_burning_army_custom_730"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/clinkz/730/burning_army/burning_army"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "1"
+
+        "IsGrantedByScepter"            "1"
+
+        "AbilityTextureName"            "clinkz_burning_army"
+
+        "AbilityCastRange"              "1200"
+        "AbilityCooldown"               "80"
+        "AbilityManaCost"               "150"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
+
+        "AbilityValues"
+        {
+            "range"                     "1300"
+            "duration"                  "30.0"
+            "count"                     "5"
+            "attack_rate"               "1.6"
+            "damage_percent"            "30.0"
+            "spawn_interval"            "0.5"
+        }
+    }
+
+    "clinkz_death_pact_custom_730"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/clinkz/730/death_pact/death_pact"
+
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+
+        "FightRecapLevel"               "2"
+        "MaxLevel"                      "3"
+
+        "AbilityTextureName"            "clinkz_death_pact"
+
+        "AbilityCastRange"              "900"
+        "AbilityCastPoint"              "0.2"
+        "AbilityCooldown"               "80 70 60"
+        "AbilityManaCost"               "100"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
+
+        "AbilityValues"
+        {
+            "duration"                  "65"
+            "health_gain_pct"
+            {
+                "value"                                         "40.0 70.0 100.0"
+                "special_bonus_unique_clinkz_730_custom_4"      "+50.0"
+            }
+            "damage_gain_pct"
+            {
+                "value"                                         "4.0 8.0 12.0"
+                "special_bonus_unique_clinkz_730_custom_4"      "+5.0"
+            }
+        }
+    }
+
+    //=========================//
+    //         TALENTS         //
+    //=========================//
+
+    // -5s Skeleton Walk Cooldown
+    "special_bonus_unique_clinkz_730_custom"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // +30 Searing Arrows Damage
+    "special_bonus_unique_clinkz_730_custom_2"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // +2 Burning Barrage arrows
+    "special_bonus_unique_clinkz_730_custom_3"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // +50/5% Death Pact Health/Damage
+    "special_bonus_unique_clinkz_730_custom_4"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // Searing Arrows Multishot
+    "special_bonus_unique_clinkz_730_custom_5"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+}

@@ -1,0 +1,12 @@
+<!-- xml reconstructed by Source 2 Viewer 15.0.0.0 - https://valveresourceformat.github.io -->
+<root>
+	<scripts />
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/custom_game/tips.vcss_c" />
+	</styles>
+	<Button>
+		<Panel id="CustomTipImage" />
+		<Label id="CustomTipLabel" text="#DOTA_Scoreboard_Tip" />
+	</Button>
+</root>

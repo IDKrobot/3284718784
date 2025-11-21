@@ -1,0 +1,209 @@
+// abilities for pudge 7.22
+
+"DOTAAbilities"
+{
+    "pudge_meat_hook_custom_722"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/pudge/722/meat_hook/meat_hook"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+
+        "HasScepterUpgrade"             "1"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "AbilityTextureName"            "pudge_meat_hook"
+
+        "AbilityCastRange"              "1300"
+        "AbilityCastPoint"              "0.3"
+        "AbilityCooldown"               "27 22 17 12"
+        "AbilityManaCost"               "140"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
+
+        "AbilityValues"
+        {
+            "damage"
+            {
+                "value"                     "150 220 290 360"
+                "special_bonus_scepter"     "=180 =270 =360 =450"
+                "DamageTypeTooltip"         "DAMAGE_TYPE_PURE"
+            }
+            "hook_speed"                    "1450"
+            "hook_width"                    "100"
+            "hook_distance"                 "1300"
+            "vision_radius"                 "500"
+            "vision_duration"               "4.0"
+            "AbilityCooldown"
+            {
+                "value"                     "27 22 17 12"
+                "special_bonus_scepter"     "=4"
+            }
+        }
+    }
+
+    "pudge_rot_custom_722"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/pudge/722/rot/rot"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "AbilityTextureName"            "pudge_rot"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_2"
+
+        "AbilityValues"
+        {
+            "rot_radius"
+            {
+                "value"                     "250"
+                "affected_by_aoe_increase"  "1"
+            }
+            "rot_tick"                      "0.2"
+            "rot_slow"
+            {
+                "value"                                     "11.0 18.0 25.0 32.0"
+                "special_bonus_unique_pudge_722_custom_2"   "+16.0"
+            }
+            "rot_damage"
+            {
+                "value"                                     "30 60 90 120"
+                "special_bonus_unique_pudge_722_custom"     "+35"
+            }
+        }
+    }
+
+    "pudge_flesh_heap_custom_722"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/pudge/722/flesh_heap/flesh_heap"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "AbilityTextureName"            "pudge_flesh_heap"
+
+        "AbilityValues"
+        {
+            "flesh_heap_rangeradius"
+            {
+                "value"                                         "450"
+                "affected_by_aoe_increase"                      "1"
+            }
+            "flesh_heap_strength_buff_amount"
+            {
+                "value"                                         "1.0 1.5 2.0 2.5"
+                "special_bonus_unique_pudge_722_custom_4"       "+2.0"
+            }
+            "flesh_heap_health_regeneration"                    "5.0 8.0 11.0 14.0"
+        }
+    }
+
+    "pudge_dismember_custom_722"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/pudge/722/dismember/dismember"
+
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES_STRONG"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+
+        "FightRecapLevel"               "2"
+        "MaxLevel"                      "3"
+
+        "AbilityTextureName"            "pudge_dismember"
+
+        "AbilityCastRange"              "160"
+        "AbilityCastPoint"              "0.3"
+        "AbilityChannelTime"            "3.0"
+        "AbilityCooldown"               "30 25 20"
+        "AbilityManaCost"               "100 130 170"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
+        "AbilityChannelAnimation"       "ACT_DOTA_CHANNEL_ABILITY_4"
+
+        "AbilityValues"
+        {
+            "dismember_damage"
+            {
+                "value"                         "60 90 120"
+                "CalculateSpellDamageTooltip"   "1"
+            }
+            "strength_damage"
+            {
+                "value"                         "0.3 0.6 0.9"
+                "CalculateSpellDamageTooltip"   "0"
+            }
+            "ticks"
+            {
+                "value"                                     "6"
+                "special_bonus_unique_pudge_722_custom_3"   "+6"
+            }
+            "pull_units_per_second"             "75"
+            "pull_distance_limit"               "125"
+            "creep_dismember_duration_tooltip"
+            {
+                "value"                                     "6.0"
+                "special_bonus_unique_pudge_722_custom_3"   "+3.0"
+            }
+            "AbilityChannelTime"
+            {
+                "value"                                     "3.0"
+                "special_bonus_unique_pudge_722_custom_3"   "+3.0"
+            }
+        }
+    }
+
+    //=========================//
+    //         TALENTS         //
+    //=========================//
+
+    // +35 Rot Damage
+    "special_bonus_unique_pudge_722_custom"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // +16% Rot Slow
+    "special_bonus_unique_pudge_722_custom_2"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // +3s Dismember Duration
+    "special_bonus_unique_pudge_722_custom_3"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // +2.0 Flesh Heap Stack Str
+    "special_bonus_unique_pudge_722_custom_4"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+}

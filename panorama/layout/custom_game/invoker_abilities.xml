@@ -1,0 +1,13 @@
+<!-- xml reconstructed by Source 2 Viewer 15.0.0.0 - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/custom_game/global.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/custom_game/utils.vjs_c" />
+		<include src="s2r://panorama/scripts/custom_game/aghanim_utils.vjs_c" />
+		<include src="s2r://panorama/scripts/custom_game/invoker_abilities.vjs_c" />
+	</scripts>
+	<Panel />
+</root>

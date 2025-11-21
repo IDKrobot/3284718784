@@ -1,0 +1,172 @@
+"DOTAAbilities"
+{
+    "huskar_inner_vitality_custom_717"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/huskar/717/inner_vitality/inner_vitality"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "AbilityTextureName"            "huskar_inner_vitality"
+
+        "AbilityCastRange"              "800"
+        "AbilityCastPoint"              "0.3"
+        "AbilityCooldown"               "22 18 14 10"
+        "AbilityManaCost"               "140 150 160 170"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
+
+        "AbilityValues"
+        {
+            "duration"                  "16"
+            "heal"                      "12"
+            "attribute_bonus"           "6 8 10 12"
+            "hurt_attribute_bonus"      "22 30 38 46"
+            "hurt_percent"              "35"
+        }
+    }
+
+    "huskar_burning_spear_custom_717"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/huskar/717/burning_spear/burning_spear"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "AbilityTextureName"            "huskar_burning_spear"
+
+        "AbilityCastRange"              "450"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_2"
+
+        "AbilityValues"
+        {
+            "duration"                  "8"
+            "health_cost"               "15"
+            "burn_damage"
+            {
+                "value"                                         "5 10 15 20"
+                "special_bonus_unique_huskar_717_custom"        "+10"
+            }
+        }
+    }
+
+    "huskar_berserkers_blood_custom_717"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/huskar/717/berserkers_blood/berserkers_blood"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "IsBreakable"                   "1"
+
+        "AbilityTextureName"            "huskar_berserkers_blood"
+
+        "AbilityValues"
+        {
+            "maximum_attack_speed"      "220 260 300 340"
+            "maximum_resistance"        "20 30 40 50"
+            "hp_threshold_max"          "10"
+        }
+    }
+
+    "huskar_life_break_custom_717"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/huskar/717/life_break/life_break"
+
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+        "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+
+        "HasScepterUpgrade"             "1"
+
+        "FightRecapLevel"               "2"
+        "MaxLevel"                      "3"
+
+        "AbilityTextureName"            "huskar_life_break"
+
+        "AbilityCastPoint"              "0.3"
+        "AbilityCooldown"               "12"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
+
+        "AbilityValues"
+        {
+            "duration"                  "4 5 6"
+            "charge_speed"              "1200"
+            "health_cost_percent"
+            {
+                "value"                             "34 38 42"
+                "CalculateSpellDamageTooltip"       "1"
+            }
+            "health_damage"
+            {
+                "value"                     "34 38 42"
+                "special_bonus_scepter"     "=65"
+                "DamageTypeTooltip"         "DAMAGE_TYPE_MAGICAL"
+            }
+            "movespeed"                 "-40 -50 -60"
+            "AbilityCooldown"
+            {
+                "value"                     "12"
+                "special_bonus_scepter"     "=4"
+            }
+            "AbilityCastRange"
+            {
+                "value"                                         "550"
+                "special_bonus_unique_huskar_717_custom_2"      "+400"
+            }
+        }
+    }
+
+    //=========================//
+    //         TALENTS         //
+    //=========================//
+    
+    // +10 Burning Spears DPS
+    "special_bonus_unique_huskar_717_custom"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // +400 Life Break Cast Range
+    "special_bonus_unique_huskar_717_custom_2"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // Burning Spears Pure Damage
+    "special_bonus_unique_huskar_717_custom_3"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+}

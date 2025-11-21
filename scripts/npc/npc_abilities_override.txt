@@ -1,0 +1,7 @@
+"DOTAAbilities"
+{
+    // "item_refresher_shard"
+    // {
+    //     "AbilitySharedCooldown"         "refresher"
+    // }
+}

@@ -1,0 +1,194 @@
+// abilities for sniper 7.22
+
+"DOTAAbilities"
+{
+    "sniper_shrapnel_custom_722"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/sniper/722/shrapnel/shrapnel"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "AbilityCastRange"              "1800"
+        "AbilityCastPoint"              "0.3"
+        "AbilityManaCost"               "50"
+
+        "AbilityTextureName"            "sniper_shrapnel"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
+
+        "AbilityValues"
+        {
+            "slow_movement_speed"
+            {
+                "value"                                         "-15 -20 -25 -30"
+                "special_bonus_unique_sniper_722_custom"        "-20"
+            }
+            "radius"
+            {
+                "value"                         "450"
+                "affected_by_aoe_increase"      "1"
+            }
+            "shrapnel_damage"           "15 35 55 75"
+            "duration"                  "10.0"
+            "damage_delay"              "1.2"
+            "slow_duration"             "2.0"
+            "max_charges"
+            {
+                "value"                                         "3"
+                "special_bonus_unique_sniper_722_custom_4"      "+6"
+            }
+            "charge_restore_time"       "40"
+        }
+    }
+
+    "sniper_headshot_custom_722"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/sniper/722/headshot/headshot"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "IsBreakable"                   "1"
+
+        "AbilityTextureName"            "sniper_headshot"
+
+        "AbilityValues"
+        {
+            "bonus_damage"              "30 60 90 120"
+            "slow_duration"             "0.5"
+            "proc_chance"               "40.0"
+            "knockback_distance"
+            {
+                "value"                                         "10"
+                "special_bonus_unique_sniper_722_custom_2"      "+35"
+            }
+            "slow"                      "-100"
+        }
+    }
+
+    "sniper_take_aim_custom_722"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/sniper/722/take_aim/take_aim"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "AbilityCooldown"               "9 8 7 6"
+        "AbilityManaCost"               "30"
+
+        "AbilityTextureName"            "sniper_take_aim"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_3"
+
+        "AbilityValues"
+        {
+            "bonus_attack_range"        "100 200 300 400"
+        }
+    }
+    
+    "sniper_assassinate_custom_722"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/sniper/722/assassinate/assassinate"
+
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+
+        "HasScepterUpgrade"             "1"
+
+        "FightRecapLevel"               "2"
+        "MaxLevel"                      "3"
+
+        "AbilityCastRange"              "3000"
+        "AbilityCastRangeBuffer"        "600"
+        "AbilityCastPoint"              "2.0"
+        "AbilityCooldown"               "20 15 10"
+        "AbilityManaCost"               "175 225 275"
+
+        "AbilityTextureName"            "sniper_assassinate"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
+
+        "AbilityValues"
+        {
+            "damage"                    "320 485 650"
+            "projectile_speed"          "2500"
+            "cast_point"
+            {
+                "value"                                         "2.0"
+                "special_bonus_unique_sniper_722_custom_3"      "-1.5"
+            }
+
+            "scepter_radius"
+            {
+                "value"                         "0"
+                "special_bonus_scepter"         "=400"
+                "affected_by_aoe_increase"      "1"
+                "RequiresScepter"               "1"
+            }
+            "scepter_crit_bonus"
+            {
+                "value"                     "0"
+                "special_bonus_scepter"     "=280"
+                "RequiresScepter"           "1"
+            }
+        }
+    }
+
+    //=========================//
+    //         TALENTS         //
+    //=========================//
+
+    // +20% Shrapnel Slow
+    "special_bonus_unique_sniper_722_custom"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // +35 Knockback Distance Headshot
+    "special_bonus_unique_sniper_722_custom_2"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // -1.5s Assassinate Cast Time
+    "special_bonus_unique_sniper_722_custom_3"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // +6 Shrapnel Charges
+    "special_bonus_unique_sniper_722_custom_4"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+}

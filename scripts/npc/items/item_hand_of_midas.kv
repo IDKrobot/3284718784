@@ -1,0 +1,46 @@
+"DOTAAbilities"
+{
+    // CURRENT
+    "item_hand_of_midas"
+    {
+        "AbilitySharedCooldown"         "midas"
+    }
+
+    // 7.27
+    "item_hand_of_midas_custom_727"
+    {
+        "BaseClass"                     "item_lua"
+        "ScriptFile"                    "abilities/items/hand_of_midas/727/hand_of_midas"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_CREEP"
+        "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS | DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+
+        "AbilityTextureName"            "item_hand_of_midas_727"
+
+        "AbilityCooldown"               "90"
+        "AbilityCastRange"              "600"
+        "AbilitySharedCooldown"         "midas"
+
+        "ItemPermanent"                 "1"
+        "ItemDisassembleRule"           "DOTA_ITEM_DISASSEMBLE_NEVER"
+
+        "SpeciallyBannedFromNeutralSlot"        "1"
+
+        "ItemCost"                      "2200"
+        "ItemShopTags"                  "attack_speed;hard_to_tag"
+        "ItemQuality"                   "common"
+        "ItemAliases"                   "hand of midas"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+        "SuggestLategame"               "1"
+        "ItemPurchasable"               "0"
+
+        "AbilityValues"
+        {
+            "bonus_attack_speed"        "40"
+            "xp_multiplier"             "2.1"
+            "bonus_gold"                "160"
+        }
+    }
+}

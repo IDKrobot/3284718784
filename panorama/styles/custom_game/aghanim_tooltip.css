@@ -1,0 +1,284 @@
+/* Prettified by Source 2 Viewer 15.0.0.0 - https://valveresourceformat.github.io */
+
+.TooltipContainer.TooltipVisible #Contents
+{
+	opacity: 1.0;
+}
+
+.NoChildrenLabel
+{
+	visibility: visible;
+}
+
+#AbilityValues.Hidden
+{
+	visibility: collapse;
+}
+
+.AbilityInfo
+{
+	padding: 4px;
+	flow-children: down;
+}
+
+.AbilityInfo .TypeTitle
+{
+	text-transform: uppercase;
+	text-overflow: shrink;
+	text-align: center;
+	height: 18px;
+	vertical-align: middle;
+	color: #9ab0cd;
+	background-color: #4160b630;
+	border-radius: 3px;
+	font-size: 16px;
+	padding: -1px 5px;
+	font-weight: normal;
+	letter-spacing: 0px;
+	margin-right: 2px;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+.GrantedAbility .TypeTitle
+{
+	background-color: #4160b660;
+	color: #9ab0cd;
+}
+
+.GrantedAbility .DetailsContainer
+{
+	background-color: #00000000;
+}
+
+.AbilityInfo #AbilityCosts
+{
+	margin-left: -5.5px;
+}
+
+.InlineIcon
+{
+	width: 16px;
+	height: 16px;
+	margin: 2px;
+}
+
+#AbilityTypeTitle
+{
+	height: 36px;
+	margin-bottom: 5px;
+	flow-children: down;
+}
+
+#AbilityName
+{
+	font-family: titleFont;
+	color: #c7c7c7;
+	text-shadow: 1px 1px 2px 2 black;
+	vertical-align: top;
+	margin-top: -2px;
+	margin-right: 2px;
+	margin-left: -4px;
+	text-transform: uppercase;
+	font-weight: semi-bold;
+	letter-spacing: 1px;
+	font-size: 18px;
+}
+
+#AbilityDescription
+{
+	color: #9ab0cd;
+	font-size: 16px;
+	margin-right: 2px;
+	letter-spacing: 0px;
+	font-weight: normal;
+}
+
+#AbilityValues
+{
+	margin-top: 5px;
+	color: #596e89;
+	font-size: 16px;
+	font-weight: normal;
+	margin-top: 5px;
+	margin-right: 2px;
+	letter-spacing: 0px;
+	font-family: defaultFont;
+}
+
+#AbilityValues Image
+{
+	width: 16px;
+	height: 16px;
+	margin: 2px;
+}
+
+.HasScepter #AghsStatusScepterIcon
+{
+	background-image: url("s2r://panorama/images/hud/reborn/aghsstatus_scepter_on_psd.vtex");
+	brightness: 2;
+}
+
+.HasShard #AghsStatusShardIcon
+{
+	background-image: url("s2r://panorama/images/hud/reborn/aghsstatus_shard_on_psd.vtex");
+	brightness: 2;
+}
+
+.HasScepter #AghsStatusScepterScene.SceneLoaded
+{
+	opacity: 1;
+}
+
+.HasShard #AghsStatusShardScene.SceneLoaded
+{
+	opacity: 1;
+}
+
+.HasScepter #TopSection .AghsTitle
+{
+	color: gradient( linear, 0% 0%, 40% 0%, from( #62cdff ), to( #658CF8 ) );
+}
+
+.HasShard #BottomSection .AghsTitle
+{
+	color: gradient( linear, 0% 0%, 40% 0%, from( #62cdff ), to( #658CF8 ) );
+}
+
+#AghsTooltipConnector
+{
+	width: 100%;
+	height: 12px;
+	margin: 0px 16px;
+	background-color: #111416f7;
+}
+
+.InlineScepterHeader,.InlineShardHeader
+{
+	flow-children: right;
+	margin-left: 8px;
+}
+
+#AghsStatusScepterContainer,#AghsStatusShardContainer
+{
+	width: 34px;
+	height: 34px;
+	margin-right: 4px;
+	overflow: noclip;
+}
+
+.InlineScepterHeader #AghsStatusScepterIcon
+{
+	width: 100%;
+	height: 100%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("s2r://panorama/images/hud/reborn/aghsstatus_scepter_on_psd.vtex");
+	z-index: 2;
+	overflow: noclip;
+	margin-top: -5px;
+	brightness: 2;
+}
+
+.InlineShardHeader #AghsStatusShardIcon
+{
+	width: 100%;
+	height: 100%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("s2r://panorama/images/hud/reborn/aghsstatus_shard_on_psd.vtex");
+	z-index: 2;
+	overflow: noclip;
+	margin-top: -5px;
+	brightness: 2;
+}
+
+#AghsStatusScepterScene
+{
+	width: 250%;
+	height: 250%;
+	margin-top: -60%;
+	margin-left: -70%;
+	opacity-mask: url("s2r://panorama/images/masks/softedge_box_irregular_png.vtex") 1.0;
+}
+
+#AghsStatusShardScene
+{
+	width: 250%;
+	height: 250%;
+	margin-top: -143%;
+	margin-left: -75%;
+	opacity-mask: url("s2r://panorama/images/masks/softedge_box_irregular_png.vtex") 1.0;
+}
+
+.AghsTitle
+{
+	font-size: 20px;
+	font-weight: semi-bold;
+	color: gradient( linear, 0% 0%, 40% 0%, from( #92acf5 ), to(#6378b3 ) );
+	text-shadow: 2px 2px 0px #000000;
+}
+
+.InlineScepterDescription,.InlineShardDescription
+{
+	width: 100%;
+	padding-top: 10px;
+	background-color: gradient( linear, 0% 0%, 0% 200%, from( #1c2024fd ), to( #000000fd ) );
+	background-color: #10171c;
+	background-image: url("s2r://panorama/images/hud/aghs_tooltip_bg_psd.vtex");
+	background-repeat: no-repeat;
+	background-position: 0px -2px;
+	margin-left: 4px;
+	margin-bottom: 10px;
+	border: 1px solid black;
+	transition-duration: 0.0s;
+	transition-property: opacity;
+	transition-timing-function: ease-in-out;
+	opacity: 0.0;
+}
+
+.InlineScepterDescription .InsetContainer,.InlineShardDescription .InsetContainer
+{
+	padding: 0;
+	margin-top: 37px;
+}
+
+.DetailsContainer
+{
+	flow-children: right;
+	margin-bottom: 7px;
+}
+
+.InlineScepterDescription .InsetContainer #AbilityDescription,.InlineShardDescription .InsetContainer #AbilityDescription
+{
+	margin-left: 7px;
+}
+
+#Contents.NoShard #AghsTooltipConnector
+{
+	visibility: collapse;
+}
+
+#Contents.NoShard #BottomSection
+{
+	visibility: collapse;
+}
+
+.InlineScepterDescription.Visible,.InlineShardDescription.Visible
+{
+	transition-duration: 0.12s;
+	opacity: 1.0;
+}
+
+.InlineScepterDescription.Hidden,.InlineShardDescription.Hidden
+{
+	visibility: visible;
+}
+
+.InlineScepterDescription.Hidden.NoUpgrade,.IsItem .InlineScepterDescription.Hidden,.InlineShardDescription.Hidden.NoUpgrade,.IsItem .InlineShardDescription.Hidden
+{
+	visibility: collapse;
+}
+

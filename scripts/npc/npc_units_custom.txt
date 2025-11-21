@@ -1,0 +1,74 @@
+#base "units/techies_684.txt"
+#base "units/techies_725.txt"
+#base "units/clinkz_730.txt"
+#base "units/invoker_732.txt"
+#base "units/broodmother_728.txt"
+
+// Units File
+"DOTAUnits"
+{
+    "Version"    "1"
+
+    //=================================================================================
+    // Creature: Dummy Unit
+    //=================================================================================
+    "npc_dummy_unit"
+    {
+        "BaseClass"                     "npc_dota_creep_neutral"
+        "Model"                         "models/development/invisiblebox.vmdl"
+        "Level"                         "0"
+        "ArmorPhysical"                 "0"
+        "MagicalResistance"             "0"
+        "AttackCapabilities"            "DOTA_UNIT_CAP_NO_ATTACK"
+        "BoundsHullName"                "DOTA_HULL_SIZE_SMALL"
+        "RingRadius"                    "80"
+        "MovementCapabilities"          "DOTA_UNIT_CAP_MOVE_NONE"
+        "StatusHealth"                  "1"
+        "TeamName"                      "DOTA_TEAM_GOODGUYS"
+        "CombatClassDefend"             "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+        "UnitRelationshipClass"         "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+        "VisionDaytimeRange"            "0"
+        "VisionNighttimeRange"          "0"
+        "CustomData"
+        {
+            "BlockNeutralCamps"         "0"
+        }
+    }
+
+    //=================================================================================
+    // Creature: Rune Icon
+    //=================================================================================
+    "npc_rune_icon"
+    {
+        "Model"                         "models/development/invisiblebox.vmdl"
+        "BaseClass"                     "npc_dota_base_additive"
+        "MinimapIcon"                   "minimap_rune_bounty"
+        "MinimapDisableTint"            "1"
+        "MinimapIconSize"               "250"
+        "SoundSet"                      "0"
+        "Level"                         "1"
+        "ModelScale"                    "1"
+        "CanBeDominated"                "0"
+        "ArmorPhysical"                 "0"
+        "AttackCapabilities"            "DOTA_UNIT_CAP_NO_ATTACK"
+        "AttackDamageMin"               "0"
+        "AttackDamageMax"               "0"
+        "AttackRate"                    "1.0"
+        "AttackAnimationPoint"          "0.0"
+        "AttackAcquisitionRange"        "0"
+        "AttackRange"                   "0"
+        "ProjectileModel"               ""
+        "ProjectileSpeed"               "0"
+        "HealthBarOffset"               "400"
+        "MovementCapabilities"          "DOTA_UNIT_CAP_MOVE_NONE"
+        "StatusHealth"                  "1000"
+        "StatusHealthRegen"             "0.0"
+        "VisionDaytimeRange"            "0"
+        "VisionNighttimeRange"          "0"
+        "TeamName"                      "DOTA_TEAM_NEUTRALS"
+        "CustomData"
+        {
+            "BlockNeutralCamps"         "0"
+        }
+    }
+}

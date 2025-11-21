@@ -1,0 +1,96 @@
+"DOTAAbilities"
+{
+    // 7.33
+    "item_solar_crest_custom_733"
+    {
+        "BaseClass"                     "item_lua"
+        "ScriptFile"                    "abilities/items/solar_crest/733/solar_crest"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_BOTH"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "FightRecapLevel"               "1"
+
+        "AbilityTextureName"            "item_solar_crest_733"
+
+        "AbilityCastRange"              "1000"
+        "AbilityCooldown"               "16"
+        "AbilitySharedCooldown"         "pavise"
+
+        "ItemCost"                      "2600"
+        "ItemShopTags"                  "armor;regen_mana;hard_to_tag"
+        "ItemQuality"                   "rare"
+        "ItemAliases"                   "solar crest"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+        "SuggestLategame"               "1"
+        "ItemPurchasable"               "0"
+
+        "AbilityValues"
+        {
+            "bonus_armor"               "7"
+            "bonus_all_stats"           "6"
+            "self_movement_speed"       "25"
+            "bonus_mana_regen"          "1.75"
+            "target_movement_speed"     "18"
+            "target_attack_speed"       "70"
+            "duration"                  "8"
+        }
+    }
+
+    // PURCHASED
+    "item_recipe_solar_crest_custom_733_purchased"
+    {
+        "BaseClass"                     "item_datadriven"
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "AbilityTextureName"            "item_recipe_solar_crest_733"
+
+        "ItemCost"                      "700"
+        "ItemShopTags"                  ""
+
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_solar_crest_custom_733_purchased"
+        "ItemRequirements"
+        {
+            "01"                        "item_medallion_of_courage*;item_crown;item_wind_lace"
+        }
+    }
+
+    "item_solar_crest_custom_733_purchased"
+    {
+        "BaseClass"                     "item_lua"
+        "ScriptFile"                    "abilities/items/solar_crest/733/solar_crest"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_BOTH"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "FightRecapLevel"               "1"
+
+        "AbilityTextureName"            "item_solar_crest_733"
+
+        "AbilityCastRange"              "1000"
+        "AbilityCooldown"               "16"
+        "AbilitySharedCooldown"         "pavise"
+
+        "ItemCost"                      "2425"
+        "ItemShopTags"                  "armor;regen_mana;hard_to_tag"
+        "ItemQuality"                   "rare"
+        "ItemAliases"                   "solar crest"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+        "SuggestLategame"               "1"
+
+        "AbilityValues"
+        {
+            "bonus_armor"               "7"
+            "bonus_all_stats"           "6"
+            "self_movement_speed"       "25"
+            "bonus_mana_regen"          "1.75"
+            "target_movement_speed"     "18"
+            "target_attack_speed"       "70"
+            "duration"                  "8"
+        }
+    }
+}

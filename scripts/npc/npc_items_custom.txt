@@ -1,0 +1,44 @@
+// item fix
+#base "items/item_blink.kv"
+#base "items/item_overwhelming_blink.kv"
+#base "items/item_swift_blink.kv"
+#base "items/item_arcane_blink.kv"
+
+#base "items/consumables.kv"
+
+// neutral items
+// #base "items/neutral_items/728.kv"
+
+// old patch items
+#base "items/item_abyssal_blade.kv"
+#base "items/item_bloodstone.kv"
+#base "items/item_ethereal_blade.kv"
+#base "items/item_null_talisman.kv"
+#base "items/item_bracer.kv"
+#base "items/item_silver_edge.kv"
+#base "items/item_nullifier.kv"
+#base "items/item_bloodthorn.kv"
+#base "items/item_black_king_bar.kv"
+#base "items/item_solar_crest.kv"
+#base "items/item_octarine_core.kv"
+#base "items/item_revenants_brooch.kv"
+#base "items/item_hand_of_midas.kv"
+#base "items/item_heart.kv"
+#base "items/item_eternal_shroud.kv"
+#base "items/item_angels_demise.kv"
+#base "items/item_gungir.kv"
+#base "items/item_sange_and_yasha.kv"
+
+// removed items
+#base "items/item_necronomicon.kv"
+#base "items/item_tome_of_knowledge.kv"
+#base "items/item_wraith_pact.kv"
+#base "items/item_medallion_of_courage.kv"
+#base "items/item_hood_of_defiance.kv"
+#base "items/item_ring_of_aquila.kv"
+#base "items/item_poor_mans_shield.kv"
+
+"DOTAAbilities"
+{
+
+}

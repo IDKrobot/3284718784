@@ -1,0 +1,64 @@
+<!-- xml reconstructed by Source 2 Viewer 15.0.0.0 - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/custom_game/global.vcss_c" />
+		<include src="s2r://panorama/styles/custom_game/old_neutral_items.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/custom_game/utils.vjs_c" />
+		<include src="s2r://panorama/scripts/custom_game/old_neutral_items.vjs_c" />
+	</scripts>
+	<snippets>
+		<snippet name="TeamNeutralItemsSnippet">
+			<Panel class="CustomTeamNeutralItems">
+				<Panel id="TeamNeutralItemsTierList" />
+				<Label class="TeamNeutralItemsHint" text="#DOTA_TeamNeutralItems_Hint" html="true" />
+				<TextButton id="NeutralItemsToggleButton" class="NeutralItemsToggleButton" text="#DOTA_TeamNeutralItems_ViewAll" html="true" />
+			</Panel>
+		</snippet>
+		<snippet name="AllNeutralItemsSnippet">
+			<Panel class="CustomAllNeutralItems">
+				<Panel id="CustomGridNeutralItems" />
+				<Label id="NeutralItemsDescription" text="#DOTA_Shop_NeutralItemsDescription" />
+				<TextButton id="NeutralItemsToggleButton" class="NeutralItemsToggleButton" text="#DOTA_TeamNeutralItems_ViewTeam" />
+			</Panel>
+		</snippet>
+		<snippet name="NeutralItemsTierSnippet">
+			<Panel class="CustomNeutralItemsTier">
+				<Panel class="CustomNeutralItemsTierHeader">
+					<Label class="CustomNeutralItemsTierName" text="#DOTA_Shop_NeutralTier" />
+					<Panel class="FillWidth" />
+					<Label class="CustomNeutralItemsTierTimes" text="{s:tier_times}" />
+					<Label class="CustomNeutralItemsTierCount" text="[ {d:tier_found_count} / {d:tier_max_count} ]" />
+				</Panel>
+				<Panel id="NeutralItemsList" />
+			</Panel>
+		</snippet>
+		<snippet name="TeamNeutralItemsTierSnippet">
+			<Panel class="TeamNeutralItemsTier">
+				<Panel class="CustomTeamNeutralItemsTierHeader">
+					<Label class="TeamNeutralItemsTierTitle" text="#DOTA_Shop_NeutralTier" />
+					<Panel class="FillWidth" />
+					<Panel class="LeftRightFlow" onmouseover="UIShowTextTooltip( #DOTA_NeutralItemSlot_TimeTip );" onmouseout="UIHideTextTooltip();">
+						<Panel class="Clock" />
+						<Label class="TeamNeutralItemsTierTimes" text="{s:tier_times}" />
+						<Label class="TeamNeutralItemsTierCount" text="[ {d:tier_found_count} / {d:tier_max_count} ]" />
+					</Panel>
+				</Panel>
+				<Panel id="TierItemsList" />
+			</Panel>
+		</snippet>
+		<snippet name="TeamNeutralItemSnippet">
+			<Panel class="CustomTeamNeutralItem">
+				<Panel class="TeamNeutralItemMainContents">
+					<DOTAItemImage id="ShopItem" />
+					<Label class="TeamNeutralItemStatus" text="{s:status}" />
+				</Panel>
+				<DOTAHeroImage id="HeroImage" heroimagestyle="icon" />
+				<Panel class="NewItemOverlay" />
+			</Panel>
+		</snippet>
+	</snippets>
+	<Panel />
+</root>

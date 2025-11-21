@@ -1,0 +1,14 @@
+#base "generic/high_five.kv"
+
+#base "heroes/abilities.kv"
+
+"DOTAAbilities"
+{
+    "axe_culling_blade"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/axe/current/culling_blade/culling_blade"
+
+        "AbilityTextureName"            "axe_culling_blade"
+    }
+}

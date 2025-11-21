@@ -1,0 +1,81 @@
+<!-- xml reconstructed by Source 2 Viewer 15.0.0.0 - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/hud/dota_hud_aghs_status_display.vcss_c" />
+		<include src="s2r://panorama/styles/ability_details.vcss_c" />
+		<include src="s2r://panorama/styles/tooltips/tooltip_base.vcss_c" />
+		<include src="s2r://panorama/styles/tooltips/tooltip_aghs_status.vcss_c" />
+		<include src="s2r://panorama/styles/custom_game/global.vcss_c" />
+		<include src="s2r://panorama/styles/custom_game/aghanim_tooltip.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/custom_game/utils.vjs_c" />
+		<include src="s2r://panorama/scripts/custom_game/aghanim_utils.vjs_c" />
+		<include src="s2r://panorama/scripts/custom_game/tooltips/custom_aghanim_tooltip.vjs_c" />
+	</scripts>
+	<snippets>
+		<snippet name="AghsScepterSnippet">
+			<Panel class="InsetContainer">
+				<Panel class="DetailsContainer">
+					<DOTAAbilityImage id="ScepterAbilityImage" />
+					<Panel class="AbilityInfo">
+						<Panel id="AbilityTypeTitle">
+							<Label id="AbilityName" html="true" text="{s:scepter_granted_ability}" />
+							<Label class="TypeTitle" text="#DOTA_AbilityTooltip_Upgrade" />
+						</Panel>
+						<Label id="AbilityDescription" text="{s:scepter_upgrade_description}" html="true" />
+						<Label id="AbilityValues" text="{s:scepter_upgrade_values}" html="true" />
+					</Panel>
+				</Panel>
+			</Panel>
+		</snippet>
+		<snippet name="AghsScepterNewAbilitySnippet">
+			<Panel class="InsetContainer GrantedAbility">
+				<Panel class="DetailsContainer">
+					<DOTAAbilityImage id="ScepterAbilityImage" />
+					<Panel class="AbilityInfo">
+						<Panel id="AbilityTypeTitle">
+							<Label id="AbilityName" html="true" text="{s:scepter_granted_ability}" />
+							<Label class="TypeTitle" text="#DOTA_AbilityTooltip_Aghs_New_Ability" />
+						</Panel>
+						<Label id="AbilityDescription" text="{s:scepter_upgrade_description}" html="true" />
+						<Label id="AbilityValues" text="{s:scepter_upgrade_values}" html="true" />
+						<Panel id="AbilityCosts">
+							<Label id="AbilityCooldown" class="Cooldown" text="0" html="true" />
+							<Label id="AbilityManaCost" class="ManaCost" text="0" html="true" />
+						</Panel>
+					</Panel>
+				</Panel>
+			</Panel>
+		</snippet>
+		<snippet name="NoUpgradeSnippet">
+			<Panel class="NoChildrenLabel">
+				<Label text="#DOTA_AbilityTooltip_No_Aghs_Upgrade_Found" />
+			</Panel>
+		</snippet>
+	</snippets>
+	<Panel class="AghsStatusContents" ontooltiploaded="SetupTooltip();" hittest="false" hittestchildren="false">
+		<Panel id="TopSection" class="SectionContent" hittest="false">
+			<Panel class="LeftRightFlow">
+				<Panel id="AghsStatusScepterContainer">
+					<Panel id="AghsStatusScepterIcon" />
+					<DOTAParticleScenePanel id="AghsStatusScepterScene" hittest="false" map="scenes/dota_ui_particle_scene_panel_empty" camera="default_camera" />
+				</Panel>
+				<Label class="AghsTitle" text="#DOTA_AbilityTooltip_Aghs_Scepter" />
+			</Panel>
+			<Panel id="AghsScepterContainer" class="AghsDescriptionContents AghsContainer" />
+		</Panel>
+		<Panel id="AghsTooltipConnector" />
+		<Panel id="BottomSection" class="SectionContent" hittest="false">
+			<Panel class="LeftRightFlow">
+				<Panel id="AghsStatusShardContainer">
+					<Panel id="AghsStatusShardIcon" />
+					<DOTAParticleScenePanel id="AghsStatusShardScene" hittest="false" map="scenes/dota_ui_particle_scene_panel_empty" camera="default_camera" />
+				</Panel>
+				<Label class="AghsTitle" text="#DOTA_AbilityTooltip_Aghs_Shard" />
+			</Panel>
+			<Panel id="AghsShardContainer" class="AghsDescriptionContents AghsContainer" />
+		</Panel>
+	</Panel>
+</root>

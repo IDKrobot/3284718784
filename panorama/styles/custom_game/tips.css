@@ -1,0 +1,222 @@
+/* Prettified by Source 2 Viewer 15.0.0.0 - https://valveresourceformat.github.io */
+
+.AltPressed #CustomTipButton:not(.InCooldown)
+{
+	visibility: visible;
+}
+
+#scoreboard #CustomTipButton.IsCooldown
+{
+	brightness: 0.1;
+	saturation: 0;
+}
+
+#scoreboard .LocalPlayer #CustomTipButton,#scoreboard .EmptyPlayerRow #CustomTipButton
+{
+	visibility: collapse;
+}
+
+#scoreboard #CustomTipButton
+{
+	vertical-align: middle;
+	visibility: visible;
+	opacity: 1;
+	margin-bottom: 0px;
+}
+
+#CustomTipButton
+{
+	width: 58px;
+	min-height: 0px;
+	background-color: gradient(linear, 50% 0%, 50% 100%, from(#423621), to(#1a1e22));
+	border-top: 1px solid #76716b;
+	border-left: 1px solid #5c5750;
+	border-right: 1px solid #392f1b;
+	border-bottom: 1px solid #0d1115;
+	vertical-align: bottom;
+	horizontal-align: center;
+	margin-bottom: 75px;
+	overflow: clip;
+	padding: 1px 4px 1px 4px;
+	flow-children: right;
+	transition-property: pre-transform-scale2d, opacity, transform;
+	transition-duration: 0.12s;
+	transition-timing-function: ease-in-out;
+	z-index: 2;
+	opacity: 0.3;
+	visibility: collapse;
+}
+
+#CustomTipButton:hover
+{
+	opacity: 1.0;
+}
+
+#scoreboard #CustomTipImage
+{
+	width: 18px;
+	height: 18px;
+	margin-right: 0px;
+}
+
+#CustomTipImage
+{
+	width: 16px;
+	height: 16px;
+	margin-left: 2px;
+	margin-right: 2px;
+	vertical-align: middle;
+	background-image: url("s2r://panorama/images/dota_plus/currency_icon_png.vtex");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#scoreboard #CustomTipLabel
+{
+	margin-top: 2px;
+}
+
+#CustomTipLabel
+{
+	color: #dcd087;
+	font-size: 14px;
+	font-family: defaultFont;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 4px black;
+	vertical-align: middle;
+	text-align: center;
+	margin-top: 1px;
+}
+
+#MainContainer
+{
+	width: 320px;
+	height: 100px;
+	margin-bottom: 8px;
+	horizontal-align: right;
+	border: 1px solid #042a40;
+	background-color: gradient(linear, 0% 0%, 0% 100%, from(#242e33), to(#0e1619));
+	box-shadow: 0px 0px 10px #000000;
+}
+
+.ToastPlayer
+{
+	margin: 8px 8px 4px 8px;
+	flow-children: down;
+}
+
+.ToastPlayerName
+{
+	width: 107px;
+	height: 22px;
+	text-align: center;
+	font-size: 16px;
+	text-shadow: 1px 1px 0px black;
+	margin-top: 2px;
+}
+
+DOTAHeroImage
+{
+	width: 107px;
+	height: 60px;
+	border: 1px solid black;
+}
+
+#SaluteAction
+{
+	flow-children: down;
+	horizontal-align: center;
+	vertical-align: middle;
+	margin-bottom: 24px;
+}
+
+#SaluteText
+{
+	vertical-align: middle;
+	horizontal-align: middle;
+	text-align: center;
+	color: #d2e4ec;
+	text-transform: uppercase;
+	margin-top: 4px;
+	letter-spacing: 1px;
+	max-width: 80px;
+}
+
+#SourcePlayer
+{
+	horizontal-align: left;
+}
+
+#TargetPlayer
+{
+	horizontal-align: right;
+}
+
+#TipAmount
+{
+	flow-children: right;
+	horizontal-align: center;
+	margin: 0px 8px;
+}
+
+#TipIcon
+{
+	width: 24px;
+	height: 24px;
+	margin-right: 2px;
+	vertical-align: middle;
+	background-image: url("s2r://panorama/images/dota_plus/currency_icon_png.vtex");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#TipValue
+{
+	color: #d2e4ec;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+#CustomTipControls
+{
+	width: 100px;
+	vertical-align: middle;
+	flow-children: down;
+}
+
+#CustomTipsAvailable
+{
+	width: 100px;
+	margin-top: 4px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 15px;
+	vertical-align: middle;
+	color: white;
+	visibility: collapse;
+}
+
+#scoreboard .LocalPlayer #CustomTipsAvailable
+{
+	visibility: visible;
+}
+
+#CustomTipsCooldown
+{
+	width: 100px;
+	margin-top: -4px;
+	text-align: center;
+	font-size: 14px;
+	vertical-align: middle;
+	color: #999;
+	visibility: collapse;
+}
+
+#scoreboard .LocalPlayer #CustomTipsCooldown.InCooldown
+{
+	visibility: visible;
+}
+

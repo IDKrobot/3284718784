@@ -1,0 +1,27 @@
+<!-- xml reconstructed by Source 2 Viewer 15.0.0.0 - https://valveresourceformat.github.io -->
+<root>
+	<scripts>
+		<include src="s2r://panorama/scripts/custom_game/utils.vjs_c" />
+		<include src="s2r://panorama/scripts/custom_game/manifest.vjs_c" />
+		<include src="s2r://panorama/scripts/custom_game/dota_ui_fix.vjs_c" />
+		<include src="s2r://panorama/scripts/custom_game/vector_targeting.vjs_c" />
+	</scripts>
+	<Panel>
+		<CustomUIElement type="Hud" layoutfile="s2r://panorama/layout/custom_game/selection.vxml_c" />
+		<CustomUIElement type="Hud" layoutfile="s2r://panorama/layout/custom_game/tips.vxml_c" />
+		<CustomUIElement type="Hud" layoutfile="s2r://panorama/layout/custom_game/secondary_abilities.vxml_c" />
+		<CustomUIElement type="Hud" layoutfile="s2r://panorama/layout/custom_game/item_patch_selection.vxml_c" />
+		<CustomUIElement type="Hud" layoutfile="s2r://panorama/layout/custom_game/arc_warden_panel.vxml_c" />
+		<CustomUIElement type="Hud" layoutfile="s2r://panorama/layout/custom_game/invoker_abilities.vxml_c" />
+		<CustomUIElement type="Hud" layoutfile="s2r://panorama/layout/custom_game/attribute_changer.vxml_c" />
+		<CustomUIElement type="Hud" layoutfile="s2r://panorama/layout/custom_game/morphling_attributes.vxml_c" />
+		<CustomUIElement type="Hud" layoutfile="s2r://panorama/layout/custom_game/aghanim_tooltip.vxml_c" />
+		<CustomUIElement type="Hud" layoutfile="s2r://panorama/layout/custom_game/custom_indicator.vxml_c" />
+		<CustomUIElement type="Hud" layoutfile="s2r://panorama/layout/custom_game/custom_chat.vxml_c" />
+		<CustomUIElement type="Hud" layoutfile="s2r://panorama/layout/custom_game/outpost_combat_event.vxml_c" />
+		<CustomUIElement type="GameSetup" layoutfile="s2r://panorama/layout/custom_game/team_select.vxml_c" />
+		<CustomUIElement type="GameSetup" layoutfile="s2r://panorama/layout/custom_game/team_select_settings.vxml_c" />
+		<CustomUIElement type="HeroSelection" layoutfile="s2r://panorama/layout/custom_game/changed_hero_visual.vxml_c" />
+		<CustomUIElement type="HeroSelection" layoutfile="s2r://panorama/layout/custom_game/patch_selection.vxml_c" />
+	</Panel>
+</root>

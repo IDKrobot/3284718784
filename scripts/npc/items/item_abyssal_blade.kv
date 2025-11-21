@@ -1,0 +1,54 @@
+"DOTAAbilities"
+{
+    // CURRENT
+    "item_abyssal_blade"
+    {
+        "AbilitySharedCooldown"         "abyssal_blade"
+    }
+
+    // 7.25
+    "item_abyssal_blade_custom_725"
+    {
+        "BaseClass"                     "item_lua"
+        "ScriptFile"                    "abilities/items/abyssal_blade/725/abyssal_blade"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+        "FightRecapLevel"               "1"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES_STRONG"
+
+        "AbilityTextureName"            "item_abyssal_blade_725"
+
+        "AbilityCooldown"               "35"
+        "AbilityCastRange"              "600"
+        "AbilityManaCost"               "75"
+        "AbilitySharedCooldown"         "abyssal_blade"
+
+        "ItemCost"                      "6250"
+        "ItemShopTags"                  "damage;str;hard_to_tag"
+        "ItemQuality"                   "epic"
+        "ItemAliases"                   "abyssal blade"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        "SuggestLategame"               "1"
+        "ItemPurchasable"               "0"
+
+        "AbilityValues"
+        {
+            "bonus_damage"              "35"
+            "bonus_health"              "250"
+            "bonus_health_regen"        "10"
+            "block_damage_melee"        "70"
+            "block_damage_ranged"       "35"
+            "block_chance"              "50"
+            "bonus_strength"            "10"
+            "bash_chance_melee"         "25"
+            "bash_chance_ranged"        "10"
+            "bash_duration"             "1.5"
+            "bash_cooldown"             "2.3"
+            "bonus_chance_damage"       "120"
+            "stun_duration"             "2"
+        }
+    }
+}

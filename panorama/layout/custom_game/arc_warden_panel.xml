@@ -1,0 +1,38 @@
+<!-- xml reconstructed by Source 2 Viewer 15.0.0.0 - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/custom_game/global.vcss_c" />
+		<include src="s2r://panorama/styles/custom_game/arc_warden_panel.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/custom_game/utils.vjs_c" />
+		<include src="s2r://panorama/scripts/custom_game/arc_warden_panel.vjs_c" />
+	</scripts>
+	<Panel class="MainHud" hittest="false">
+		<Panel id="UnitsDisplay" hittest="false">
+			<Panel id="UnitsDisplayContainer" hittest="false">
+				<Panel id="UnitRow0" class="UnitRow MainSelected" onactivate="SelectWarden(&apos;original&apos;);">
+					<Panel id="UnitDisplayContainer">
+						<DOTAHeroImage id="ArcWardenImage" class="UnitImage" scaling="stretch" />
+					</Panel>
+					<Panel id="ProgressContainer">
+						<ProgressBar id="HealthProgress" class="ProgressBar" value="1" />
+						<ProgressBar id="ManaProgress" class="ProgressBar" value="1" />
+					</Panel>
+					<Panel id="RecentlyDamaged" hittest="false" />
+				</Panel>
+				<Panel id="UnitRow1" class="UnitRow" onactivate="SelectWarden(&apos;tempest&apos;);">
+					<Panel id="UnitDisplayContainer">
+						<DOTAHeroImage id="ArcWardenImage" class="UnitImage" scaling="stretch" />
+					</Panel>
+					<Panel id="ProgressContainer">
+						<ProgressBar id="HealthProgress" class="ProgressBar" value="1" />
+						<ProgressBar id="ManaProgress" class="ProgressBar" value="1" />
+					</Panel>
+					<Panel id="RecentlyDamaged" hittest="false" />
+				</Panel>
+			</Panel>
+		</Panel>
+	</Panel>
+</root>

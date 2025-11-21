@@ -1,0 +1,252 @@
+// abilities for dazzle 7.34
+
+"DOTAAbilities"
+{
+    "dazzle_poison_touch_custom_734"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/dazzle/734/poison_touch/poison_touch"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+
+        "HasShardUpgrade"               "1"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "AbilityTextureName"            "dazzle_poison_touch"
+
+        "AbilityCastRange"              "500 600 700 800"
+        "AbilityCastPoint"              "0.3"
+        "AbilityCooldown"               "27 23 19 15"
+        "AbilityManaCost"               "125 130 135 140"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
+
+        "AbilityValues"
+        {
+            "start_radius"
+            {
+                "value"                         "200"
+                "affected_by_aoe_increase"      "1"
+            }
+            "end_radius"
+            {
+                "value"                         "200"
+                "affected_by_aoe_increase"      "1"
+            }
+            "end_distance"
+            {
+                "value"                         "600 700 800 900"
+                "affected_by_aoe_increase"      "1"
+            }
+            "targets"                   "2 4 6 8"
+            "damage"
+            {
+                "value"                                         "16 28 40 52"
+                "special_bonus_unique_dazzle_734_custom_4"      "+60"
+            }
+            "slow"
+            {
+                "value"                                         "-16 -18 -20 -22"
+                "special_bonus_unique_dazzle_734_custom_5"      "-40"
+            }
+            "projectile_speed"          "1300"
+            "duration"                  "5 6 7 8"
+            "bonus_slow"                "-2 -2.5 -3 -3.5"
+            "hex_duration"
+            {
+                "value"                 "0"
+                "special_bonus_shard"   "+1.6"
+            }
+            "attack_range_bonus"
+            {
+                "value"                                         "0"
+                "special_bonus_unique_dazzle_734_custom"        "+300"
+            }
+        }
+    }
+    
+    "dazzle_shallow_grave_custom_734"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/dazzle/734/shallow_grave/shallow_grave"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ALLIES_YES"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "AbilityTextureName"            "dazzle_shallow_grave"
+
+        "AbilityCastRange"              "700 800 900 1000"
+        "AbilityCastPoint"              "0.3"
+        "AbilityCooldown"               "36 30 24 18"
+        "AbilityManaCost"               "90 100 110 120"
+
+        "AbilityCastAnimation"          "ACT_DOTA_SHALLOW_GRAVE"
+        "AbilityCastGestureSlot"        "DEFAULT"
+
+        "AbilityValues"
+        {
+            "duration"                  "3.5 4 4.5 5.0"
+            "heal_amplify"              "2 4 6 8"
+            "fx_halo_height"            "190 240 300 350"
+            "heal_on_end"
+            {
+                "value"                                         "0"
+                "special_bonus_unique_dazzle_734_custom_3"      "+200"
+            }
+        }
+    }
+    
+    "dazzle_shadow_wave_custom_734"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/dazzle/734/shadow_wave/shadow_wave"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+
+        "HasScepterUpgrade"             "1"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "AbilityTextureName"            "dazzle_shadow_wave"
+
+        "AbilityCastRange"              "800"
+        "AbilityCastPoint"              "0.3"
+        "AbilityCooldown"               "12 11 10 9"
+        "AbilityManaCost"               "75"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_3"
+
+        "AbilityValues"
+        {
+            "bounce_radius"
+            {
+                "value"                         "475"
+                "affected_by_aoe_increase"      "1"
+            }
+            "damage_radius"
+            {
+                "value"                         "185"
+                "affected_by_aoe_increase"      "1"
+            }
+            "max_targets"               "3 4 5 6"
+            "tooltip_max_targets_inc_dazzle"        "4 5 6 7"
+            "damage"
+            {
+                "value"                                         "75 95 115 135"
+                "special_bonus_unique_dazzle_734_custom_2"      "+45"
+            }
+
+            "scepter_heal_pct"          "150"
+            "scepter_cd_increase"       "2"
+        }
+    }
+    
+    "dazzle_bad_juju_custom_734"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/dazzle/734/bad_juju/bad_juju"
+
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+
+        "FightRecapLevel"               "2"
+        "MaxLevel"                      "3"
+
+        "AbilityTextureName"            "dazzle_bad_juju"
+
+        "AbilityCastPoint"              "0.2"
+        "AbilityCooldown"               "3"
+        "AbilityHealthCost"             "75"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
+
+        "AbilityValues"
+        {
+            "armor_reduction"           
+            {
+                "value"                                         "1 2 3"
+                "special_bonus_unique_dazzle_734_custom_6"      "+0.5"
+            }
+            "duration"                  "8 10 12"
+            
+            "cooldown_reduction"            "4 5 6"
+            "cooldown_reduction_items"      "3 4 5"
+            "mana_cost_increase_pct"        "50"
+            "mana_cost_increase_duration"   "20"
+            "max_stacks"                    "15"
+        }
+    }
+
+    //=========================//
+    //         TALENTS         //
+    //=========================//
+
+    // +300 Poison Touch Attack Range
+    "special_bonus_unique_dazzle_734_custom"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // +45 Shadow Wave Heal / Damage
+    "special_bonus_unique_dazzle_734_custom_2"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // +200 Heal On Shallow Grave End 
+    "special_bonus_unique_dazzle_734_custom_3"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // +60 Poison Touch DPS
+    "special_bonus_unique_dazzle_734_custom_4"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // +40% Poison Touch Slow
+    "special_bonus_unique_dazzle_734_custom_5"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // +0.5 Bad Juju Armor Reduction/Increase
+    "special_bonus_unique_dazzle_734_custom_6"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+}

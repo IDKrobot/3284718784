@@ -1,0 +1,44 @@
+"DOTAAbilities"
+{
+    // CURRENT
+    "item_black_king_bar"
+    {
+        "AbilitySharedCooldown"         "black_king_bar"
+    }
+
+    // 7.28
+    "item_black_king_bar_custom_728"
+    {
+        "BaseClass"                     "item_lua"
+        "ScriptFile"                    "abilities/items/black_king_bar/728/black_king_bar"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "FightRecapLevel"               "2"
+
+        "AbilityTextureName"            "item_black_king_bar_728"
+
+        "AbilityCooldown"               "70"
+        "AbilitySharedCooldown"         "black_king_bar"
+
+        "ItemBaseLevel"                 "1"
+        "MaxUpgradeLevel"               "6"
+
+        "ItemCost"                      "4050"
+        "ItemShopTags"                  "str;damage;hard_to_tag"
+        "ItemQuality"                   "epic"
+        "ItemAliases"                   "bkb;black king bar"
+        "ItemSellable"                  "1"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        "SuggestLategame"               "1"
+        "ItemPurchasable"               "0"
+
+        "AbilityValues"
+        {
+            "bonus_strength"            "10"
+            "bonus_damage"              "24"
+            "duration"                  "10 9 8 7 6 5"
+            "max_level"                 "6"
+            "model_scale"               "30"
+        }
+    }
+}

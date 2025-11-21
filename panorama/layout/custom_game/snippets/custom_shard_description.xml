@@ -1,0 +1,23 @@
+<!-- xml reconstructed by Source 2 Viewer 15.0.0.0 - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/custom_game/global.vcss_c" />
+		<include src="s2r://panorama/styles/custom_game/aghanim_tooltip.vcss_c" />
+	</styles>
+	<scripts />
+	<Panel class="InlineShardDescription" hittest="false" hittestchildren="false">
+		<Panel class="InlineShardHeader" hittest="false" hittestchildren="false">
+			<Panel id="AghsStatusShardContainer" hittest="false" hittestchildren="false">
+				<Panel id="AghsStatusShardIcon" hittest="false" />
+				<DOTAParticleScenePanel id="AghsStatusShardScene" particleonly="true" cameraOrigin="400 0 0" lookAt="180 0 0" fov="20" hittest="false" />
+			</Panel>
+			<Label class="AghsTitle" text="#DOTA_AbilityTooltip_Aghs_Shard" hittest="false" />
+		</Panel>
+		<Panel class="InsetContainer" hittest="false" hittestchildren="false">
+			<Panel class="DetailsContainer" hittest="false" hittestchildren="false">
+				<Label id="AbilityDescription" text="{s:shard_upgrade_description}" html="true" hittest="false" />
+			</Panel>
+		</Panel>
+	</Panel>
+</root>

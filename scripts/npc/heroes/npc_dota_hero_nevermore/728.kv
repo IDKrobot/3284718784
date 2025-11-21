@@ -1,0 +1,315 @@
+// abilities for nevermore 7.28
+
+"DOTAAbilities"
+{
+    "nevermore_shadowraze1_custom_728"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/nevermore/728/shadowraze/shadowraze"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+
+        "LinkedAbility"                 "nevermore_shadowraze2_custom_728"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "AbilityTextureName"            "nevermore_shadowraze1"
+
+        "AbilityCastPoint"              "0.55"
+        "AbilityCooldown"               "10"
+        "AbilityManaCost"               "75 80 85 90"
+
+        "AbilityCastAnimation"          "ACT_DOTA_RAZE_1"
+        "AbilityCastGestureSlot"        "DEFAULT"
+
+        "AbilityValues"
+        {
+            "damage"
+            {
+                "value"                                             "90 160 230 300" 
+                "special_bonus_unique_nevermore_728_custom_3"       "+120"
+            }
+            "radius"
+            {
+                "value"                     "250"
+                "affected_by_aoe_increase"  "1"
+            }
+            "range"                     "200"
+            "stack_bonus_damage" 
+            {
+                "value"                         "50 60 70 80"
+                "CalculateSpellDamageTooltip"   "0"
+            }
+            "duration"                  "8"
+        }
+    }
+
+    "nevermore_shadowraze2_custom_728"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/nevermore/728/shadowraze/shadowraze"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+
+        "LinkedAbility"                 "nevermore_shadowraze3_custom_728"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "AbilityTextureName"            "nevermore_shadowraze2"
+
+        "AbilityCastPoint"              "0.55"
+        "AbilityCooldown"               "10"
+        "AbilityManaCost"               "75 80 85 90"
+
+        "AbilityCastAnimation"          "ACT_DOTA_RAZE_2"
+        "AbilityCastGestureSlot"        "DEFAULT"
+
+        "AbilityValues"
+        {
+            "damage"
+            {
+                "value"                                             "90 160 230 300" 
+                "special_bonus_unique_nevermore_728_custom_3"       "+120"
+            }
+            "radius"
+            {
+                "value"                     "250"
+                "affected_by_aoe_increase"  "1"
+            }
+            "range"                     "450"
+            "stack_bonus_damage" 
+            {
+                "value"                         "50 60 70 80"
+                "CalculateSpellDamageTooltip"   "0"
+            }
+            "duration"                  "8"
+        }
+    }
+
+    "nevermore_shadowraze3_custom_728"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/nevermore/728/shadowraze/shadowraze"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+
+        "LinkedAbility"                 "nevermore_shadowraze1_custom_728"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "AbilityTextureName"            "nevermore_shadowraze3"
+
+        "AbilityCastPoint"              "0.55"
+        "AbilityCooldown"               "10"
+        "AbilityManaCost"               "75 80 85 90"
+
+        "AbilityCastAnimation"          "ACT_DOTA_RAZE_3"
+        "AbilityCastGestureSlot"        "DEFAULT"
+
+        "AbilityValues"
+        {
+            "damage"
+            {
+                "value"                                             "90 160 230 300" 
+                "special_bonus_unique_nevermore_728_custom_3"       "+120"
+            }
+            "radius"
+            {
+                "value"                     "250"
+                "affected_by_aoe_increase"  "1"
+            }
+            "range"                     "700"
+            "stack_bonus_damage" 
+            {
+                "value"                         "50 60 70 80"
+                "CalculateSpellDamageTooltip"   "0"
+            }
+            "duration"                  "8"
+        }
+    }
+
+    "nevermore_necromastery_custom_728"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/nevermore/728/necromastery/necromastery"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+        "HasShardUpgrade"               "1"
+        "HasScepterUpgrade"             "1"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "IsBreakable"                   "1"
+
+        "AbilityTextureName"            "nevermore_necromastery"
+
+        "AbilityValues"
+        {
+            "damage_per_soul"  
+            {
+                "value"                                         "1 2 3 4"
+                "CalculateSpellDamageTooltip"                   "0"
+                "special_bonus_unique_nevermore_728_custom_2"   "+3"
+            }
+            "spell_amp_per_soul"
+            {
+                "value"                 "0"
+                "special_bonus_shard"   "=0.75"
+            }
+            "max_souls"        
+            {
+                "value"                     "11 14 17 20"
+                "special_bonus_scepter"     "=25"
+            }
+            "souls_per_kill"                "1"
+            "soul_release"                  "0.5"
+            "soul_release_tooltip"          "50.0"
+        }
+    }
+
+    "nevermore_dark_lord_custom_728"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/nevermore/728/dark_lord/dark_lord"
+
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "4"
+
+        "OnCastbar"                     "0"
+        "IsBreakable"                   "1"
+
+        "AbilityTextureName"            "nevermore_dark_lord"
+
+        "AbilityValues"
+        {
+            "armor_reduction"
+            {
+                "value"                                         "-4 -5 -6 -7"
+                "special_bonus_unique_nevermore_728_custom_4"   "-4"
+            }
+            "radius"
+            {
+                "value"                             "1200"
+                "affected_by_aoe_increase"          "1"
+            }
+        }
+    }
+
+    "nevermore_requiem_custom_728"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/heroes/nevermore/728/requiem/requiem"
+
+        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+
+        "HasScepterUpgrade"             "1"
+
+        "FightRecapLevel"               "2"
+        "MaxLevel"                      "3"
+
+        "AbilityCastPoint"              "1.67"
+        "AbilityCooldown"               "120 110 100"
+        "AbilityManaCost"               "150 175 200"
+
+        "AbilityTextureName"            "nevermore_requiem"
+
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_6"
+
+        "AbilityModifierSupportValue"   "0.5"
+
+        "AbilityValues"
+        {
+            "damage"                    "80 120 160"
+            "radius"
+            {
+                "value"                         "1000"
+                "affected_by_aoe_increase"      "1"
+            }
+            "reduction_ms"              "-25"
+            "slow_duration"             "0.8"
+            "slow_duration_max"         "2.4"
+            "soul_conversion"           "1"
+            "line_width_start"
+            {
+                "value"                         "125"
+                "affected_by_aoe_increase"      "1"
+            }
+            "line_width_end"
+            {
+                "value"                         "350"
+                "affected_by_aoe_increase"      "1"
+            }
+            "line_speed"                "700"
+            "soul_death_release"        "0.5"
+            "heal_pct_scepter"
+            {
+                "value"                 "100"
+                "RequiresScepter"       "1"
+            }
+            "damage_pct_scepter"
+            {
+                "value"                             "40"
+                "RequiresScepter"                   "1"
+                "CalculateSpellDamageTooltip"       "0"
+            }
+        }
+    }
+
+    //=========================//
+    //         TALENTS         //
+    //=========================//
+
+    // Presence Aura Affects Building
+    "special_bonus_unique_nevermore_728_custom"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // +3 Damage per soul
+    "special_bonus_unique_nevermore_728_custom_2"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // +120 Shadowraze damage
+    "special_bonus_unique_nevermore_728_custom_3"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+    // -4 Presence aura armor
+    "special_bonus_unique_nevermore_728_custom_4"
+    {
+        "BaseClass"                     "special_bonus_base"
+        "AbilityType"                   "ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+}

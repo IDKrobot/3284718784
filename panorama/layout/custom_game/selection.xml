@@ -1,0 +1,8 @@
+<!-- xml reconstructed by Source 2 Viewer 15.0.0.0 - https://valveresourceformat.github.io -->
+<root>
+	<scripts>
+		<include src="s2r://panorama/scripts/selection/selection.js" />
+		<include src="s2r://panorama/scripts/selection/selection_filter.js" />
+	</scripts>
+	<Panel />
+</root>
